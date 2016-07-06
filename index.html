@@ -19,6 +19,7 @@
       <ol>
 <li>判断滑动视图的滚动方向：
 在 “-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate代理方法中”
+
 CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];
 if (translation.y&gt;0)
 {
@@ -27,7 +28,9 @@ if (translation.y&gt;0)
 else if(translation.y&lt;0)
 {
     NSLog(@"向下滑动");
-}</li>
+}
+
+</li>
 </ol>
 
       <footer class="site-footer">
