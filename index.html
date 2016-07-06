@@ -18,18 +18,21 @@
     <section class="main-content">
       <ol>
 <li>判断滑动视图的滚动方向：
-在 “-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate代理方法中”
+在 “
 
-CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];
-if (translation.y&gt;0)
+```
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+  CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];
+  if (translation.y&gt;0)
+  {
     NSLog(@"向上滑动");
-}
-else if(translation.y&lt;0)
-{
+  }
+  else if(translation.y&lt;0)
+  {
     NSLog(@"向下滑动");
+  }
 }
-
 </li>
 </ol>
 
