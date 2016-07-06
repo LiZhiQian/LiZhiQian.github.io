@@ -1,0 +1,6 @@
+{
+  "name": "Lizhiqian.GitHub.io",
+  "tagline": "开发中遇到的技术小问题",
+  "body": "1. 判断滑动视图的滚动方向：\r\n在 “-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate代理方法中”\r\n    CGPoint translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview];\r\n    if (translation.y>0)\r\n    {\r\n        NSLog(@\"向上滑动\");\r\n    }\r\n    else if(translation.y<0)\r\n    {\r\n        NSLog(@\"向下滑动\");\r\n    }",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
